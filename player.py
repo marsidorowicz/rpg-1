@@ -39,5 +39,5 @@ class Player(object):
         self._score = score
 
     def __str__(self):
-        return "Nazwa: {0.name}, Życia: {0.lives}, Poziom: {0.level}, Wynik: {0.score}".format(self)
+        return "Imię: {0.name}, Życia: {0.lives}, Poziom: {0.level}, Wynik: {0.score}".format(self)
 

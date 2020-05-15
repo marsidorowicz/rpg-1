@@ -1,28 +1,19 @@
+import random
 from player import Player
 
-Mariusz = Player("Mariusz")
 
-from enemy import Enemy, Troll, Misiolak
-
-ugly_troll = Troll("Pug")
-
-another_troll = Troll("Ug")
-print("Another Troll - {}".format(another_troll))
-
-brother = Troll("Urg")
-print(brother)
-ugly_troll.attack()
-another_troll.attack()
-brother.attack()
-ugly_troll.take_damage(3)
-another_troll.take_damage(5)
-brother.take_damage(8)
-Jasiu = Misiolak("Jasiu")
-print(Jasiu)
+from enemy import Enemy, Troll, Misiolak, MisiolakKing
 
 
-while Jasiu.alive:
-    if not Jasiu.dodge():
-        Jasiu.take_damage(1)
-        print(Jasiu)
+playerName = input("Adventure, gra RPG. Podaj swoje imię: ")
+print("Witaj ", playerName)
+player = Player(playerName)
+print("Poznaj swoje statystyki: {}".format(player))
 
+while True:
+    ans = input("q - wyjście, s - statystyki: ")
+    if 'q' in ans.lower():
+        print("Świat RPG czeka na Twój powrót")
+        break
+    elif 's' in ans.lower():
+        print("Twoje statystyki: {}".format(player))
